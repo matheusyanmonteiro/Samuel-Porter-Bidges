@@ -1,11 +1,9 @@
 import express from 'express';
+import { routes } from './routes';
 
 const app = express();
 
-app.get('/', (request, response) => {
-  return response.json({
-    message: 'connection is hope',
-  });
-});
+app.use(express.json());
+app.use(routes);
 
 app.listen(3076, () => console.log('Server is running 🤡'));
