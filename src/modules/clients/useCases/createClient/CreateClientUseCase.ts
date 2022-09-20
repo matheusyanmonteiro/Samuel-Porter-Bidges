@@ -1,6 +1,6 @@
 import { hash } from 'bcrypt';
 
-import { prisma } from '../../../database/PrismaClient';
+import { prisma } from '../../../../database/PrismaClient';
 import { ICreateClientRequest } from './ICreateClientRequest';
 
 class CreateClientUseCase {
