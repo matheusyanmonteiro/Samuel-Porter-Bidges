@@ -1,4 +1,4 @@
-import { err } from './Errors/err';
+import { err } from './errors/err';
 import express from 'express';
 import { routes } from './routes';
 
