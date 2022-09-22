@@ -22,7 +22,7 @@ class AuthenticateClientUseCase {
       throw new Error('USERNAME OR PASSWORD INVALID!!!');
     }
 
-    const token = sign({ username }, `${process.env.RASHMD5}`, {
+    const token = sign({ username }, `${process.env.RASHMD5CLIENT}`, {
       subject: client.id,
       expiresIn: '1d',
     });

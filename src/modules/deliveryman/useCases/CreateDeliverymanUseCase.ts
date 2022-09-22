@@ -4,17 +4,19 @@ import { hash } from 'bcrypt';
 import { ICreateDeliverymanRequest } from './ICreateDeliverymanRequest';
 
 class CreateDeliverymanUseCase {
-  async execute({ password, username }: ICreateDeliverymanRequest) {
-    const clientExist = await prisma.deliveryman.findFirst({
+  async execute({ username, password }: ICreateDeliverymanRequest) {
+    const deliverymanExists = await prisma.deliveryman.findFirst({
       where: {
         username: {
+          equals: username,
           mode: 'insensitive',
         },
       },
     });
 
-    if (clientExist) {
-      throw new Error('Client already exists');
+
+    if (deliverymanExists) {
+      throw new Error('Deliveryman already exists');
     }
 
     const hashPassword = await hash(password, 10);
