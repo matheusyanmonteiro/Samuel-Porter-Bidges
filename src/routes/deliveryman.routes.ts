@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import { CreateDeliverymanController } from '../modules/deliveryman/useCases/CreateDeliverymanController';
 
-const deliveryRoutes = Router();
+const deliverymanRoutes = Router();
 const createDeliverymanController = new CreateDeliverymanController();
 
-deliveryRoutes.post('/', createDeliverymanController.handle);
+deliverymanRoutes.post('/', createDeliverymanController.handle);
 
-export { deliveryRoutes };
+export { deliverymanRoutes };
