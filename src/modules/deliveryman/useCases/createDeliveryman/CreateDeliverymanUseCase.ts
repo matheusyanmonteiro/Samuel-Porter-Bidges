@@ -1,4 +1,4 @@
-import { prisma } from '../../../database/PrismaClient';
+import { prisma } from '../../../../database/PrismaClient';
 import { hash } from 'bcrypt';
 
 import { ICreateDeliverymanRequest } from './ICreateDeliverymanRequest';

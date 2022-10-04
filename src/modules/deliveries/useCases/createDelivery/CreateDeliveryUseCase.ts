@@ -1,4 +1,4 @@
-import { prisma } from '../../../database/PrismaClient';
+import { prisma } from '../../../../database/PrismaClient';
 import { ICreateDeliveryRequest } from './ICreateDeliveryRequest';
 
 class CreateDeliveryUseCase {
